@@ -1,0 +1,14 @@
+{
+  "name": "pend",
+  "repo": "JayceTDE/pend",
+  "description": "append and prepend DOM elements",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
