@@ -2,9 +2,11 @@
   "name": "pend",
   "repo": "JayceTDE/pend",
   "description": "append and prepend DOM elements",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "component/domify": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",

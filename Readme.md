@@ -9,7 +9,18 @@
 
 ## API
 
-   
+```javascript
+
+var pend = require('pend')
+  , el = document.querySelector('#el')
+;
+
+pend(el)
+    .append('<div></div>')
+    .prepend(document.createElement('span'))
+;
+
+```
 
 ## License
 
