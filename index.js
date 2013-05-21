@@ -13,9 +13,6 @@ function isArguments(obj) {
 }
 
 function processArguments(args, fn) {
-    if (typeof(args) === 'string') {
-        args = domify(args);
-    }
     if (isArray(args) || isArguments(args)) {
         var i, l = args.length;
         if (l > 1) {
@@ -27,6 +24,13 @@ function processArguments(args, fn) {
             return;
         } else {
             args = args[0];
+        }
+    }
+    if (typeof(args) === 'string') {
+        try {
+            return processArguments(domify(args), fn);
+        } catch (e) {
+            args = document.createTextNode(args);
         }
     }
     fn(args);
