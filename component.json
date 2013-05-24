@@ -2,9 +2,10 @@
   "name": "pend",
   "repo": "JayceTDE/pend",
   "description": "append and prepend DOM elements",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [],
   "dependencies": {
+    "component/query": "*",
     "component/domify": "*"
   },
   "development": {},

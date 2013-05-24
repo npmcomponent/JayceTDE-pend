@@ -1,6 +1,7 @@
 'use strict';
 
 var domify = require('domify')
+  , query = require('query')
   , toString = Object.prototype.toString
 ;
 
@@ -37,6 +38,9 @@ function processArguments(args, fn) {
 }
 
 function Pend(el) {
+    if (typeof(el) === 'string') {
+        el = query(el);
+    }
     this.el = el;
 }
 
@@ -54,6 +58,20 @@ Pend.prototype.prepend = function () {
         self.el.insertBefore(el, self.el.firstChild);
     });
     return this;
+};
+
+Pend.prototype.appendTo = function (el) {
+    if (typeof(el) === 'string') {
+        el = query(el);
+    }
+    el.appendChild(this.el);
+};
+
+Pend.prototype.prependTo = function (el) {
+    if (typeof(el) === 'string') {
+        el = query(el);
+    }
+    el.insertBefore(this.el, el.firstChild);
 };
 
 module.exports = function (el) {
