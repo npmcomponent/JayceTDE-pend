@@ -1,7 +1,7 @@
 'use strict';
 
-var domify = require('domify')
-  , query = require('query')
+var domify = require('component-domify')
+  , query = require('component-query')
   , toString = Object.prototype.toString
 ;
 

@@ -1,0 +1,12 @@
+{
+  "name": "jaycetde-pend",
+  "description": "append and prepend DOM elements",
+  "version": "0.0.3",
+  "keywords": [],
+  "main": "index.js",
+  "dependencies": {
+    "component-query": "git://github.com/npmcomponent/component-query.git",
+    "component-domify": "git://github.com/npmcomponent/component-domify.git"
+  },
+  "license": "MIT"
+}
